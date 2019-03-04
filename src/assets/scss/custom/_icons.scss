@@ -1,0 +1,63 @@
+.mdi {
+  &:before{
+    //font-size: 120%;
+    vertical-align: -5%;
+  }
+
+  &.mdi-24px:before{
+    vertical-align: -15%;
+  }
+
+  &.mdi-lg:before {
+    font-size:120%;
+  }
+
+  &.mdi-fw:before {
+    width: 1.3333em;
+  }
+}
+
+.btn:not(.btn-icon):not([class*='btn-icon-']) {
+  .iconify {
+    margin-right: map_get($spacers, 2);
+  }
+}
+
+.iconify{
+  font-size:1.25em;  // default
+  vertical-align: -.25em!important;
+}
+
+.icon-sm{ font-size:.75em!important}
+.icon-sm{ font-size:.875em!important }
+.icon-lg{ font-size:1.3333em!important}
+.icon-2x{ font-size:2em!important }
+.icon-3x{ font-size:3em!important }
+.icon-5x{ font-size:5em!important }
+.icon-7x{ font-size:7em!important }
+
+/* Rules for sizing the icon. */
+// .material-icons {
+//   font-size: 1rem;
+//   vertical-align: -23%!important;
+//   //color: rgb(117, 117, 117); // default
+// }
+// .material-icons.md-18 { font-size: 18px; }
+// .material-icons.md-20 { font-size: 20px; vertical-align: -20%!important }
+// .material-icons.md-24 { font-size: 24px; }
+// .material-icons.md-36 { font-size: 36px; vertical-align: -33%!important}
+// .material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+//.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+//.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+// .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+// .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+// .btn {
+//   > .mdi:before {
+//     width: 1.7333em;
+//   }
+// }

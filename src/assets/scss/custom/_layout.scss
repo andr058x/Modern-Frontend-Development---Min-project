@@ -1,0 +1,256 @@
+//
+// custom rules for MaterialPRO templates
+//
+
+/**
+ * Table Of Content
+ *
+ * 	1. Globals (typography, colors...)
+ *	2. Headers/Navigations/Footers
+ *	3. Widgets (cards, modals,...)
+ *  4. Forms
+ *	5. Components (tabs, lists, panels,...)
+ */
+
+/*******************
+Globals
+*******************/
+body,
+html {
+  background: $bodycolor;
+}
+
+body {
+  font-weight: 400;
+}
+
+//
+// badge & labels
+//
+.label {
+  font-size: 85%;
+}
+
+/**************************
+Headers/Navigations/Footers
+**************************/
+.topbar {
+  box-shadow: none;
+}
+
+.footer {
+  background: $bodycolor;
+  border-top: none;
+  font-size: 0.775rem;
+}
+// undo left sidebar spaces for horizontal version
+.mini-sidebar {
+  .footer {
+    left: 0;
+  }
+}
+
+/**************************
+Widgets
+**************************/
+//
+// cards
+//
+.card {
+  border: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+}
+
+//
+// Modals
+//
+.modal {
+  .modal-dialog {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .modal-header,
+  .modal-body {
+    padding: 25px;
+  }
+  .modal-footer {
+    padding: 15px 25px;
+  }
+
+  .modal-header {
+    background-color: #f7f7f7;
+  }
+}
+
+/**************************
+Forms
+**************************/
+
+@-webkit-keyframes autofill {
+  to {
+    background-color: transparent;
+  }
+}
+
+.form-control-feedback {
+  font-weight: 500;
+  display: flex;
+  min-height: 18px;
+  min-width: 1px;
+}
+
+// material form
+.form-material {
+  // disable autocomplete style for webkit browser
+  input,
+  textarea,
+  select {
+    &:-webkit-autofill {
+      &,
+      &:focus,
+      &:hover {
+        // background-color: rgba(255,255,255,1)!important;
+        // -webkit-box-shadow: 0 0 0 100px #fff inset!important;
+        // transition: background-color 5000s ease-in-out 0s!important;
+        -webkit-animation-name: autofill;
+        -webkit-animation-fill-mode: both;
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+  }
+
+  .form-text {
+    font-size: 0.75rem;
+  }
+
+  .form-control-feedback {
+    font-size: 0.725rem;
+  }
+
+  .form-group {
+    position: relative;
+    overflow: visible;
+
+    // status
+    &.has-danger {
+      .form-control {
+        background-image: linear-gradient($themecolor, $themecolor),
+          linear-gradient($danger, $danger);
+      }
+    }
+
+    &.has-warning {
+      .form-control {
+        background-image: linear-gradient($themecolor, $themecolor),
+          linear-gradient($warning, $warning);
+      }
+    }
+
+    &.has-success {
+      .form-control {
+        background-image: linear-gradient($themecolor, $themecolor),
+          linear-gradient($success, $success);
+      }
+    }
+  }
+
+  .form-control-label {
+    font-size: 14px;
+    transform-origin: bottom left;
+    transform: scale(0.8);
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: -16px;
+  }
+
+  .form-control {
+    &:focus {
+      transition-duration: 0.2s;
+
+      // + .input-group-append {
+      //   background-size: 100% 2px, 100% 1px;
+      //   outline: 0 none;
+      //   transition-duration: 0.3s;
+      // }
+    }
+  }
+
+  // input adds-on
+  .input-group-text {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0;
+  }
+
+  &.form-bold {
+    .form-control,
+    select {
+      font-weight: bold;
+    }
+  }
+
+  // support for material style (draft for now)
+  // .input-group {
+  //   .input-group-append {
+  //     background-image: linear-gradient(#324577, #324577),
+  //       linear-gradient(#d9d9d9, #d9d9d9);
+  //     background-color: rgba(0, 0, 0, 0);
+  //     background-position: center bottom, center calc(100% - 1px);
+  //     background-repeat: no-repeat;
+  //     background-size: 0 2px, 100% 1px;
+  //     padding: 0;
+  //     transition: background 0s ease-out 0s;
+  //   }
+  // }
+}
+
+// for actions btn
+.btn-actions {
+  white-space: nowrap;
+  position: relative;
+  // display: flex;
+  // vertical-align: middle;
+
+  > .fa,
+  > .mdi {
+    // padding: 5px;
+    flex: 0 1 auto;
+  }
+}
+
+// all buttons
+.btn {
+  text-transform: uppercase;
+}
+
+/**************************
+Forms
+**************************/
+
+//
+// custom tab (material style)
+//
+.customtab {
+  li {
+    a.nav-link {
+      font-weight: 500;
+      text-transform: uppercase;
+      opacity: 0.55;
+
+      &.active,
+      &:hover {
+        opacity: 1;
+      }
+
+      // icons
+      > .mdi {
+        &:before {
+          font-size: 120%;
+        }
+      }
+    }
+  }
+}

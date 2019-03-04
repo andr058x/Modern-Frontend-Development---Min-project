@@ -1,0 +1,14 @@
+.swal2-popup{
+  border-radius: $radius;
+  box-shadow: 0 30px 55px rgba(0,0,0,.35);
+
+  .swal2-content{
+    font-size: $font-size-base;
+  }
+  .swal2-actions{
+    // for botstrap style
+    .btn {
+      margin:5px;
+    }
+  }
+}

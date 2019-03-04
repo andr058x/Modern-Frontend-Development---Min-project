@@ -1,0 +1,223 @@
+
+/*============================================================== 
+ For Laptop & above all (1650px) 
+ ============================================================== */
+
+@media(min-width:1650px) {
+    .footer-box{
+        margin-left: 120px;
+    }
+
+    .widget-app-columns {
+      column-count:3; 
+    } 
+    
+    .header-bg{
+        background-image: url("../images/background/logo-bg.png");
+        margin-top: 50px;
+        height: 539px;
+    
+        //background-attachment: inherit;
+        background-position: center; 
+        background-repeat: no-repeat;
+        //background-size: 1250px 539px;
+    }
+}
+/*============================================================== 
+ For Laptop & above all (1370px) Ipad
+ ============================================================== */
+
+@media(max-width:1370px) {
+    // .big-image{
+    //     margin-left: 200px;
+    // }
+
+    // .md-image-c{
+    //     margin-left: 200px;
+    // }
+
+    .widget-app-columns {
+      column-count:2;
+    }  
+
+    .footer-box{
+        margin-left: 70px;
+    }
+
+    .header-bg{
+        margin-top: 50px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .header-nobg{
+        margin-top: 50px;
+        height: 40px;
+        text-align: center;
+    }
+}
+
+
+/*-- ============================================================== 
+ Small Desktop & above all (1024px) 
+ ============================================================== */
+
+@media(min-width:1100px) {
+    .header-bg{
+        background-image: url("../images/background/logo-bg.png");
+        margin-top: 50px;
+        height: 539px !important;
+    
+        //background-attachment: inherit;
+        background-position: center; 
+        background-repeat: no-repeat;
+        //background-size: 1250px 539px;
+    }
+
+    .header-nobg{
+        margin-top: 50px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .container-fluid {
+        max-width: 1280px
+    }
+}
+
+@media(max-width:1023px) {
+    .big-image{
+        margin-left: 80px;
+    }
+
+    .footer-box{
+        margin-left: 30px;
+    }
+
+   .page-wrapper{
+        
+        transition: 0.2s ease-in;
+    }  
+   
+    .widget-app-columns {
+        column-count:1;
+    }
+    .inbox-center a {
+        width: 200px;
+    }
+}
+
+
+/*-- ============================================================== 
+ Ipad & above all(768px) 
+ ============================================================== */
+
+@media(min-width:768px) {
+    .header-bg{
+        margin-top: 50px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .navbar-header {
+        width: 240px;
+        flex-shrink:0;
+        .navbar-brand {
+            padding-top: 0px;
+        }
+    }
+    .material-icon-list-demo .icons div {
+        width: 33%;
+        padding: 15px;
+        display: inline-block;
+        line-height: 40px;
+    }
+   .mini-sidebar {
+        .page-wrapper{
+            margin-left:0px;
+        }
+        .footer{
+            left: 60px;
+        }
+    }
+    .flex-wrap{
+        flex-wrap:nowrap!important;
+        -webkit-flex-wrap:nowrap!important;
+    }
+    .logo-center {
+        .top-navbar {
+            .navbar-header {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+/*-- ============================================================== 
+ Phone and below ipad(767px) 
+ ============================================================== */
+
+@media(max-width:767px) {
+    .header-bg, .header-nobg{
+        background-image: none;
+        height: 150px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .big-image{
+        display: none;
+    }
+    
+    .md-image{
+        margin-left: 30px;
+    }
+
+    .footer-box{
+        margin-left: 10px;
+    }
+
+    /*Header*/
+    .topbar {
+        position: fixed;
+        width: 100%;
+        .top-navbar {
+            padding-right: 15px;
+            padding-left: 10px;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            -webkit-align-items: center;
+            .navbar-collapse {
+                display: flex;
+                width: 100%;
+            }
+            .navbar-nav {
+                flex-direction: row;
+                > .nav-item.show {
+                    position: static;
+                    .dropdown-menu {
+                        width: 100%;
+                        margin-top: 0px;
+                    }
+                }
+                > .nav-item > .nav-link {
+                    padding-left: .50rem;
+                    padding-right: .50rem;
+                }
+                .dropdown-menu {
+                    position: absolute;
+                }
+            }
+        }
+    }
+    .sidebar-nav{
+        padding:15px;
+    }
+}

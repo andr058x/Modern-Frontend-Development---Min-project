@@ -1,0 +1,144 @@
+$colors-map: (
+  "info":     $info,
+  "secondary":lighten($secondary, 40% ),
+  "primary":  $primary,
+  "success":  $success,
+  "warning":  $warning,
+  "danger":   $danger,
+  "default":  rgba(12, 12, 12, 0.07)
+);
+
+//
+// btn flat version
+//
+@mixin btn-flat-variant($color) {
+  $c: map_get($colors-map, #{$color});
+
+  &.btn-flat-#{$color} {
+    color: $bodytext;
+
+    &:hover,
+    &:focus,
+    &.focus {
+        background: $c;
+        border-color:transparent;
+        color: $bodytext;
+    }
+  }
+}
+
+
+.btn-flat,
+.btn-icon-toggle {
+  color: inherit;
+    background-color: transparent;
+    border-color: transparent;
+    transition: all .25s;
+}
+
+.btn-flat {
+    @include btn-flat-variant('info');
+    @include btn-flat-variant('primary');
+    @include btn-flat-variant('secondary');
+    @include btn-flat-variant('success');
+    @include btn-flat-variant('warning');
+    @include btn-flat-variant('danger');
+
+    &.btn-xs{
+      padding:.2rem .25rem;
+    }
+}
+
+//
+// btn circle icon version
+//
+@mixin btn-icon-variant($color) {
+  $c: map_get($colors-map, #{$color});
+
+  &.btn-icon-toggle-#{$color} {
+    color: $c;
+
+    &:hover,
+    &:focus,
+    &.focus {
+        background: $c;
+        color: $white;
+    }
+  }
+}
+
+.btn-icon-toggle {
+  padding:0;
+  width: 26px;
+  border-radius: 999px!important;
+
+  @include btn-icon-variant('info');
+  @include btn-icon-variant('primary');
+  @include btn-icon-variant('secondary');
+  @include btn-icon-variant('success');
+  @include btn-icon-variant('warning');
+  @include btn-icon-variant('danger');
+
+  .mdi {
+      line-height: 32px;
+  }
+
+  .btn-xs {
+    width:24px;
+    .mdi {
+      line-height: 22px;
+    }
+  }
+
+  .btn-sm{
+    width:32px;
+    .mdi {
+      line-height: 30px;
+    }
+  }
+
+  .btn-lg{
+    width:46px;
+    .mdi {
+      line-height: 44px;
+    }
+  }
+}
+
+//
+// set mdi default font-size
+.mdi:before{
+  font-size: 120%;
+}
+
+.btn-icon{
+  position: relative;
+  padding: 0;
+  margin:0 5px;
+  width: 24px;
+  height: 24px;
+
+  &:before{
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    top:-6px;
+    left:-6px;
+    right: -6px;
+    bottom: -6px;
+    background: none;
+    display: block;
+    transition-duration: .15s;
+    transition-property: transform,opacity;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transform: scale(0);
+  }
+
+  &:hover{
+    &:before{
+      background: rgba(32, 33, 35, .06);
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

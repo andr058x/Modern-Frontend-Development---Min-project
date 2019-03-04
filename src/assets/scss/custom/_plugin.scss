@@ -1,0 +1,10 @@
+//
+// customization for external plugins
+//
+
+// animate.css
+.animated {
+  &.fast {
+    animation-duration: 350ms;
+  }
+}

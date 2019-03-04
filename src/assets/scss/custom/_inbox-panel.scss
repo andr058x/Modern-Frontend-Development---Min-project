@@ -1,0 +1,32 @@
+.inbox-panel{
+    // remove bg color if a 'bg-' style was applied
+    &[class*="bg-"] {
+      .list-group{
+        .list-group-item{
+          background:transparent;
+
+          &:hover,
+          &.active {
+            background:#e5e6e6
+          }
+        }
+      }
+    }
+
+    // right border version
+    &.right {
+      .list-group{
+        .list-group-item{
+          border-left:none;
+          border-right: 3px solid transparent;
+
+          &.active {
+            border-right-color:$themecolor;
+          }
+        }
+      }
+
+
+
+    }
+}

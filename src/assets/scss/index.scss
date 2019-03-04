@@ -1,0 +1,36 @@
+// MaterialPro theme overrides
+$bodytext:#212121;// #4a596a; //rgba(0,0,0,0.81); // #99abb4;
+$bodyfont: 'Poppins','Roboto', sans-serif;
+$headingfont:'Poppins','Roboto', sans-serif;
+$bodycolor:#e5e6e6;
+
+$primary: #324577;
+$success: #46a149;
+$info:    #478fca; // #26A69A;
+$primary-dark: lighten($primary, 10%);
+$light:   rgba(242, 243, 243, 0.51);
+$themecolor: $primary;
+
+$radius: 2px;
+
+// ======================================================================================
+// put here libraries
+@import '../../../node_modules/animate.css/animate.css';
+//@import '../../../node_modules/@mdi/font/css/materialdesignicons.css';
+@import 'bootstrap/bootstrap.scss';
+@import '../../../node_modules/bootstrap-vue/dist/bootstrap-vue.css';
+@import '../../../node_modules/sweetalert2/dist/sweetalert2.css';
+
+// template and all customizations
+@import 'style';
+@import 'colors/commerce';
+@import 'custom/layout';
+@import 'custom/buttons';
+@import 'custom/plugin';
+
+// custom rules
+@import 'custom/utilities';
+@import 'custom/icons';
+@import 'custom/tables';
+@import 'custom/sweetalert2';
+@import 'custom/inbox-panel';
